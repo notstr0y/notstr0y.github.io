@@ -4,6 +4,8 @@ plugins:
 
 favicon: /assets/img/favicon.ico
 
+permalink: pretty
+
 theme_config:
   appearance: "dark"
   show_description: false
