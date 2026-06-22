@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div style="text-align:center; margin: 6rem auto;">
   <div style="display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap; font-size:1.2rem;">
