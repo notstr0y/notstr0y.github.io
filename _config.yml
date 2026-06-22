@@ -3,7 +3,7 @@ plugins:
   - jekyll-seo-tag
 
 theme_config:
-  appearance: "auto"
+  appearance: "dark"
   show_description: false
   lowercase_titles: true
   date_format: "%Y-%m-%d"
