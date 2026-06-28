@@ -1,9 +1,8 @@
 function cmd_whoami() {
     return `
 <div class="whoami">
-  <span class="accent">stroyoes</span><br>
-  <!-- your one-liner goes here -->
-  <span class="muted">[ placeholder ]</span>
+  <span class="accent">notstr0y</span><br>
+  Just a guy who loves embedded programming more 😄 
 </div>
 `;
 }
