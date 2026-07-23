@@ -5,6 +5,20 @@ body {
     user-select: text;
 }
 
+/* Shared line-height between the gutter and the rendered content so the
+   line-number column's total height matches the content's total height. */
+#rendered-content,
+#rendered-content h1,
+#rendered-content h2,
+#rendered-content p,
+#rendered-content li {
+    line-height: 1.9rem;
+}
+
+#line-numbers {
+    line-height: 1.9rem;
+}
+
 /* Custom scrollbar for Neovim buffer feel */
 ::-webkit-scrollbar {
     width: 6px;
