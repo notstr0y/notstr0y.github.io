@@ -7,7 +7,7 @@ const VIRTUAL_FILES = [
         modified: true,
         content: [
             { type: 'h1', text: '# home.md' },
-            { type: 'paragraph', text: 'Sreesanth S Warrier' },
+            { type: 'paragraph', text: 'notstr0y' },
             { type: 'paragraph', text: 'Third-year CSE student. I build things to learn — mostly in C, mostly close to the hardware.' },
             { type: 'paragraph', text: 'Read my <a class="md-link" onclick="switchTab(\'about.md\')">about me</a>, or <a class="md-link" onclick="switchTab(\'contact.md\')">say hi</a>.' }
         ]
@@ -19,7 +19,7 @@ const VIRTUAL_FILES = [
         modified: true,
         content: [
             { type: 'h1', text: '# about.md' },
-            { type: 'paragraph', text: 'Hello! I am Sreesanth, a third-year CSE student.' },
+            { type: 'paragraph', text: 'Hello! I am notstr0y, a third-year CSE student.' },
             { type: 'h2', text: '## Engineering Principles' },
             { type: 'list', items: [
                 '<strong>Learn by building:</strong> every topic becomes a GitHub-worthy artifact, not just notes.',
@@ -67,6 +67,7 @@ const VIRTUAL_FILES = [
         content: [
             { type: 'h1', text: '# contact.md' },
             { type: 'paragraph', text: 'Always happy to connect with anyone working on embedded systems, low-level programming, or just talking through a weird idea.' },
+            { type: 'paragraph', text: '<em>notstr0y is Sreesanth S Warrier, in case a form somewhere asks for a real name.</em>' },
             { type: 'h2', text: '## Get in touch' },
             { type: 'list', items: [
                 '<strong>Email:</strong> <a class="md-link" href="mailto:sreesanthswarrier@gmail.com">sreesanthswarrier@gmail.com</a>',
