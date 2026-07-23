@@ -1,84 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notstr0y — neovim workspace</title>
-    <meta name="description" content="notstr0y — CSE student building embedded systems, low-level tools, and weird ideas in C.">
-    <link rel="icon" href="assets/img/favicon.ico">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script src="js/tailwind-config.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notstr0y — portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="h-full flex flex-col justify-between overflow-hidden text-sm select-none bg-ctp-base text-ctp-text">
+<body>
 
-    <!-- TOP BUFFERLINE TAB BAR -->
-    <header class="bg-ctp-mantle border-b border-ctp-surface0 shrink-0 flex items-center justify-between overflow-x-auto text-xs">
-        <div id="tab-container" class="flex items-center overflow-x-auto divide-x divide-ctp-surface0/50">
-            <!-- Dynamic buffer tabs inserted via JS -->
-        </div>
-    </header>
+<header class="topbar">
+  <nav class="nav" id="nav"></nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle__thumb"><i class="fa-solid fa-sun" id="theme-icon"></i></span>
+  </button>
+</header>
 
-    <!-- MAIN WORKSPACE / EDITOR VIEW -->
-    <main class="flex-1 flex min-h-0 bg-ctp-base overflow-hidden relative">
-        <!-- Main Code Editor Body -->
-        <div class="flex-1 flex overflow-hidden">
-            <!-- Line Numbers Column -->
-            <div id="line-numbers" class="w-12 pt-4 md:pt-6 pb-4 select-none text-right pr-3 text-ctp-surface2 font-mono text-xs border-r border-ctp-surface0/40 bg-ctp-base shrink-0">
-                <!-- Line numbers rendered dynamically -->
-            </div>
+<main id="main">
+  <!-- all sections are rendered into here by js/main.js from content.yaml -->
+</main>
 
-            <!-- Content Scroll Area -->
-            <div id="editor-viewport" class="flex-1 overflow-y-auto p-4 md:p-6 lg:px-10 font-mono text-sm leading-relaxed select-text">
-                <div id="rendered-content" class="max-w-3xl space-y-4">
-                    <!-- Markdown Content Rendered Here -->
-                </div>
-            </div>
-        </div>
-    </main>
+<footer id="footer"></footer>
 
-    <!-- BOTTOM STATUSLINE (LUALINE STYLE) -->
-    <footer class="bg-ctp-mantle border-t border-ctp-surface0 shrink-0 flex items-center justify-between text-xs font-medium">
-        <!-- Left status group -->
-        <div class="flex items-center">
-            <div id="status-mode" class="bg-ctp-mauve text-ctp-crust px-3 py-1 font-bold flex items-center space-x-1">
-                <span>NORMAL</span>
-            </div>
-
-            <div class="bg-ctp-surface0 text-ctp-lavender px-3 py-1 flex items-center space-x-1.5 hidden sm:flex">
-                <i class="fa-solid fa-code-branch text-ctp-mauve"></i>
-                <span>master</span>
-            </div>
-
-            <div id="status-filepath" class="px-3 py-1 text-ctp-subtext1 flex items-center space-x-2">
-                <span class="text-ctp-teal">M</span>
-                <span id="status-filename" class="font-semibold">home.md</span>
-            </div>
-        </div>
-
-        <!-- Right status group -->
-        <div class="flex items-center divide-x divide-ctp-surface0">
-            <div class="px-3 py-1 text-ctp-overlay1 hidden md:block">
-                utf-8
-            </div>
-            <div class="px-3 py-1 text-ctp-teal hidden sm:block">
-                markdown
-            </div>
-            <div class="bg-ctp-blue text-ctp-crust px-3 py-1 font-bold hidden md:block">
-                notstr0y
-            </div>
-        </div>
-    </footer>
-
-    <!-- content data -->
-    <script src="js/data.js"></script>
-    <!-- render + interaction engine -->
-    <script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
