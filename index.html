@@ -1,39 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>notstr0y</title>
-        <link rel="icon" href="assets/img/favicon.ico">
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="terminal">
-            <div id="output"></div>
-            <div id="input-line">
-                <span class="prompt">Σ :: <span class="prompt-path">~</span> #&nbsp;</span>
-                <input type="text" id="cmd-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus />
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notstr0y — neovim workspace</title>
+    <meta name="description" content="Sreesanth S Warrier — CSE student building embedded systems, low-level tools, and weird ideas in C.">
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="h-full flex flex-col justify-between overflow-hidden text-sm select-none bg-ctp-base text-ctp-text">
+
+    <!-- TOP BUFFERLINE TAB BAR -->
+    <header class="bg-ctp-mantle border-b border-ctp-surface0 shrink-0 flex items-center justify-between overflow-x-auto text-xs">
+        <div id="tab-container" class="flex items-center overflow-x-auto divide-x divide-ctp-surface0/50">
+            <!-- Dynamic buffer tabs inserted via JS -->
+        </div>
+    </header>
+
+    <!-- MAIN WORKSPACE / EDITOR VIEW -->
+    <main class="flex-1 flex min-h-0 bg-ctp-base overflow-hidden relative">
+        <!-- Sidebar File Explorer -->
+        <aside id="file-tree" class="w-48 bg-ctp-crust border-r border-ctp-surface0 hidden lg:flex flex-col shrink-0 p-3 text-xs">
+            <div class="text-ctp-overlay1 font-semibold tracking-wider mb-2 uppercase flex items-center justify-between">
+                <span>EXPLORER</span>
+                <i class="fa-solid fa-folder-tree text-ctp-mauve"></i>
+            </div>
+            <div class="text-ctp-subtext0 mb-2 font-medium flex items-center space-x-1.5">
+                <i class="fa-solid fa-folder-open text-ctp-yellow"></i>
+                <span>notstr0y.github.io</span>
+            </div>
+            <nav id="tree-list" class="space-y-1 pl-3">
+                <!-- Tree items injected via JS -->
+            </nav>
+        </aside>
+
+        <!-- Main Code Editor Body -->
+        <div class="flex-1 flex overflow-hidden">
+            <!-- Line Numbers Column -->
+            <div id="line-numbers" class="w-12 py-4 select-none text-right pr-3 text-ctp-surface2 font-mono text-xs border-r border-ctp-surface0/40 bg-ctp-base shrink-0">
+                <!-- Line numbers rendered dynamically -->
+            </div>
+
+            <!-- Content Scroll Area -->
+            <div id="editor-viewport" class="flex-1 overflow-y-auto p-4 md:p-6 lg:px-10 font-mono text-sm leading-relaxed select-text">
+                <div id="rendered-content" class="max-w-3xl space-y-4">
+                    <!-- Markdown Content Rendered Here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM STATUSLINE (LUALINE STYLE) -->
+    <footer class="bg-ctp-mantle border-t border-ctp-surface0 shrink-0 flex items-center justify-between text-xs font-medium">
+        <!-- Left status group -->
+        <div class="flex items-center">
+            <div id="status-mode" class="bg-ctp-mauve text-ctp-crust px-3 py-1 font-bold flex items-center space-x-1">
+                <span>NORMAL</span>
+            </div>
+
+            <div class="bg-ctp-surface0 text-ctp-lavender px-3 py-1 flex items-center space-x-1.5 hidden sm:flex">
+                <i class="fa-solid fa-code-branch text-ctp-mauve"></i>
+                <span>master</span>
+            </div>
+
+            <div id="status-filepath" class="px-3 py-1 text-ctp-subtext1 flex items-center space-x-2">
+                <span class="text-ctp-teal">M</span>
+                <span id="status-filename" class="font-semibold">home.md</span>
             </div>
         </div>
 
-        <!-- commands -->
-        <script src="commands/help.js"></script>
-        <script src="commands/whoami.js"></script>
-        <script src="commands/now.js"></script>
-        <script src="commands/quote.js"></script>
-        <script src="commands/filesystem.js"></script>
+        <!-- Right status group -->
+        <div class="flex items-center divide-x divide-ctp-surface0">
+            <div class="px-3 py-1 text-ctp-overlay1 hidden md:block">
+                utf-8
+            </div>
+            <div class="px-3 py-1 text-ctp-teal hidden sm:block">
+                markdown
+            </div>
+            <div class="bg-ctp-blue text-ctp-crust px-3 py-1 font-bold hidden md:block">
+                notstr0y
+            </div>
+        </div>
+    </footer>
 
-        <!-- editor engine -->
-        <script src="editor/core.js"></script>
-        <script src="editor/commands.js"></script>
-
-        <!-- terminal engine -->
-        <script src="terminal/core.js"></script>
-        <script src="terminal/history.js"></script>
-        <script src="terminal/completion.js"></script>
-        <script src="terminal/dispatch.js"></script>
-        <script src="terminal/input.js"></script>
-
-        <script>_fire_up_the_prompt();</script>
-    </body>
+    <!-- content data -->
+    <script src="js/data.js"></script>
+    <!-- render + interaction engine -->
+    <script src="js/app.js"></script>
+</body>
 </html>
