@@ -1,0 +1,92 @@
+# ==========================================================================
+# content.yaml — every string on the site comes from here, including the
+# section names in the nav. Edit this file only; nothing else needs to
+# change to update copy. Supports nested "subsections" (heading inside a
+# heading) wherever you see that key.
+# ==========================================================================
+
+meta:
+  title: notstr0y — portfolio
+
+nav:
+  home: Home
+  about: About
+  skills: Skills
+  projects: Projects
+  experience: Experience
+  contact: Contact
+
+home:
+  name: "notstr0y"
+  name_variants:
+    from_top: "Νοτστρόι"
+    from_bottom: "ノットストロイ"
+  tagline: "I build things for the web, and occasionally break them on purpose."
+
+about:
+  heading: About
+  content: |
+    I'm a developer who likes small, well-made things more than big,
+    impressive ones. Most of what I build starts as a way to answer a
+    question I had about how something works.
+
+    Outside of code I'm usually reading, or trying to get a plant to
+    survive on my desk.
+  subsections:
+    - heading: Currently
+      content: |
+        Working on independent projects and open to interesting
+        freelance or full-time opportunities.
+
+skills:
+  heading: Skills
+  categories:
+    - name: Languages
+      items: [Python, JavaScript, TypeScript, Rust, SQL]
+    - name: Frontend
+      items: [React, Vue, SCSS, Svelte]
+    - name: Backend
+      items: [Node.js, Django, PostgreSQL, Redis]
+    - name: Tools
+      items: [Docker, Git, Linux, AWS]
+
+projects:
+  heading: Projects
+  items:
+    - title: Project One
+      description: >
+        A short, plain description of what this project does and why
+        it exists. One or two sentences is plenty.
+      link: "https://github.com/notstr0y/project-one"
+    - title: Project Two
+      description: >
+        Another project, described the same simple way. What it is,
+        who it's for, what it does.
+      link: "https://github.com/notstr0y/project-two"
+    - title: Project Three
+      description: >
+        A third project. Keep these short — the link is where the
+        detail lives.
+      link: "https://github.com/notstr0y/project-three"
+
+experience:
+  heading: Experience
+  items:
+    - role: Software Engineer
+      company: Company Name
+      period: "2023 — Present"
+      description: "Working on the things this role involves, described plainly."
+    - role: Junior Developer
+      company: Previous Company
+      period: "2021 — 2023"
+      description: "What the role involved, kept short and specific."
+
+contact:
+  heading: Contact
+  email: "hello@notstr0y.dev"
+  github: "https://github.com/notstr0y"
+  linkedin: "https://linkedin.com/in/notstr0y"
+  resume: "assets/resume.pdf"
+
+footer:
+  text: "© 2026 notstr0y"
