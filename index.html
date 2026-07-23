@@ -4,25 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>notstr0y — portfolio</title>
-<link rel="stylesheet" href="css/style.css">
+
+<!-- Fonts & FontAwesome Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="topbar">
-  <nav class="nav" id="nav"></nav>
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle__thumb"><i class="fa-solid fa-sun" id="theme-icon"></i></span>
+  <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
+    <i class="fa-solid fa-toggle-off" id="theme-icon"></i>
   </button>
 </header>
 
-<main id="main">
-  <!-- all sections are rendered into here by js/main.js from content.yaml -->
+<main>
+  <section class="hero-container">
+    <div class="hero-title" id="interactive-title"></div>
+    <div class="hero-subtitle">hover to translate · click character to open section</div>
+  </section>
+
+  <div class="section-indicator-container">
+    <span class="section-bracket-tag" id="current-section-bracket">[ whoami ]</span>
+  </div>
+
+  <div id="content-views"></div>
 </main>
 
-<footer id="footer"></footer>
+<footer></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,237 @@
+:root {
+  /* Strict Monochrome Palette - Light Mode */
+  --bg: #f9f9fb;
+  --surface: #ffffff;
+  --surface-border: #e2e2e6;
+  --text-main: #111111;
+  --text-muted: #777777;
+  --hover-bg: #eeeeee;
+}
+
+[data-theme="dark"] {
+  /* Strict Monochrome Palette - Dark Mode */
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --surface-border: #2a2a2a;
+  --text-main: #f0f0f0;
+  --text-muted: #888888;
+  --hover-bg: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem 1.25rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  user-select: none;
+}
+
+.theme-toggle-btn:hover {
+  opacity: 0.7;
+}
+
+.hero-container {
+  text-align: center;
+  margin: 2.5rem 0 3rem 0;
+}
+
+.hero-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  gap: 0.05em;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.title-char {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.1em;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  color: var(--text-main);
+  position: relative;
+  border-bottom: 3px solid transparent;
+}
+
+.title-char.clickable {
+  cursor: pointer;
+}
+
+.title-char.clickable:hover {
+  color: var(--text-main);
+  border-bottom: 3px solid var(--text-main);
+}
+
+.title-char.active-char {
+  border-bottom: 3px solid var(--text-main);
+  font-weight: 700;
+}
+
+.title-char.no-action {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.hero-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 1.2rem;
+}
+
+.section-indicator-container {
+  text-align: center;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.section-bracket-tag {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.page-view {
+  display: none;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.page-view.active-page {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2.section-heading {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.item-card {
+  background-color: var(--surface);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--surface-border);
+}
+
+.item-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.item-meta {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.skills-group {
+  margin-bottom: 1.5rem;
+}
+
+.skills-group h3 {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skill-tag {
+  font-size: 0.85rem;
+  background-color: var(--surface);
+  color: var(--text-main);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--surface-border);
+  transition: all 0.15s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background-color: var(--text-main);
+  color: var(--bg);
+  border-color: var(--text-main);
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-list i {
+  width: 1.5rem;
+  color: var(--text-main);
+}
+
+footer {
+  margin-top: 4rem;
+}
