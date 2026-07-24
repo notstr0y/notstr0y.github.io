@@ -6,6 +6,7 @@
   --text-main: #111111;
   --text-muted: #777777;
   --hover-bg: #eeeeee;
+  --accent: #9c7c5c;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --text-main: #f0f0f0;
   --text-muted: #888888;
   --hover-bg: #222222;
+  --accent: #d9c9a3;
 }
 
 * {
@@ -93,12 +95,11 @@ body {
 }
 
 .title-char.clickable:hover {
-  color: var(--text-main);
-  border-bottom: 3px solid var(--text-main);
+  color: var(--accent);
 }
 
 .title-char.active-char {
-  border-bottom: 3px solid var(--text-main);
+  color: var(--accent);
   font-weight: 700;
 }
 

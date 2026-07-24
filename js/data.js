@@ -11,9 +11,9 @@ const CONTENT = {
       ]
     },
     { latin: "s", katakana: "ス", id: "featured-work", title: "featured-work", heading: "Featured Projects", type: "projects", items: [
-        { title: "rpn-calculator-riscv-using-ripes", description: "Stack-based RPN calculator in RISC-V assembly, cross-verified against a parallel C implementation and debugged in the Ripes simulator.", link: "https://github.com/notstr0y/rpn-calculator-riscv-using-ripes" },
-        { title: "suko", description: "Command-line Sudoku solver in C using recursive backtracking, with constraint checking across rows, columns, and boxes.", link: "https://github.com/notstr0y/suko" },
-        { title: "verdict", description: "CLI tool (in progress) where AI agents debate a topic and track how their stance shifts across rounds, exporting a structured report.", link: "https://github.com/notstr0y/verdict" }
+        { title: "rpn-calculator-riscv-using-ripes", description: "Stack-based RPN calculator in RISC-V assembly, cross-verified against a parallel C implementation and debugged in the Ripes simulator.", link: "https://github.com/notstr0y" },
+        { title: "suko", description: "Command-line Sudoku solver in C using recursive backtracking, with constraint checking across rows, columns, and boxes.", link: "https://github.com/notstr0y" },
+        { title: "verdict", description: "CLI tool (in progress) where AI agents debate a topic and track how their stance shifts across rounds, exporting a structured report.", link: "https://github.com/notstr0y" }
       ]
     },
     { latin: "t", katakana: "ト", id: "career-timeline", title: "career-timeline", heading: "Career & Experience", type: "experience", items: [
