@@ -2,7 +2,7 @@ const CONTENT = {
   meta: { title: "notstr0y — portfolio" },
   sections: [
     { latin: "n", katakana: "ノ", id: "whoami", title: "whoami", heading: "Hello, world.", type: "home", tagline: "I build simple, well-crafted systems — mostly in C, mostly close to the hardware.", content: "Welcome to my space. Click on the characters of my name above to navigate through different sections." },
-    { latin: "o", katakana: "ッ", id: "more-about-me", title: "more-about-me", heading: "About Me", type: "about", content: "The real name behind notstr0y is Sreesanth.\n\nThird-year CSE undergrad, currently deep in embedded systems, algorithms, and low-level programming. I learn by building — mostly in C, mostly close to the hardware.\n\nOutside of code: pixel art, chiptune and live-coding music, retro games, film, and Malayalam literature. Also a dedicated Argentina football fan." },
+    { latin: "o", katakana: "ッ", id: "more-about-me", title: "more-about-me", heading: "About Me", type: "about", content: "The real name behind notstr0y is Sreesanth.\n\nThird-year CSE undergrad, currently deep in embedded systems, algorithms, and low-level programming. I learn by building — mostly in C, mostly close to the hardware.\n\nOutside of code: pixel art, chiptune and live-coding music, retro games, film, and literature." },
     { latin: "t", katakana: "ト", id: "skills-and-stack", title: "skills-and-stack", heading: "Skills & Technical Stack", type: "skills", categories: [
         { name: "Languages", items: ["C", "Python", "JavaScript", "Java", "RISC-V Assembly", "Lua"] },
         { name: "Frameworks & Libraries", items: ["React", "FastAPI", "Streamlit", "scikit-learn", "python-can"] },
